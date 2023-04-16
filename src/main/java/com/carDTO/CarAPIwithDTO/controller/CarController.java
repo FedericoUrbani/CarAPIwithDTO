@@ -14,9 +14,16 @@ public class CarController {
     @Autowired
     CarService carService;
 
-    @GetMapping()
+    @GetMapping("/getcar")
         private CarDTO getCar(){
         return carService.getCar();
-        }
 
+        }
+        @PostMapping("/postcar")
+        private String postCar(@RequestParam(required = true, value = "id") String id,
+                               @RequestParam(required = true, value = "modelname") String modelname,
+                               @RequestParam(required = false, value = "price") double price){
+
+        return carService.postCar(id,modelname,price);
+        }
 }

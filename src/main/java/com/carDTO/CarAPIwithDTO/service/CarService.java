@@ -20,5 +20,9 @@ public class CarService {
     return carDTO;
     }
 
-
+    public String postCar(String id, String modelname, double price) {
+        Car car= new Car(id,modelname,price);
+        System.out.println(car);
+        return "car object has been created";
+    }
 }
