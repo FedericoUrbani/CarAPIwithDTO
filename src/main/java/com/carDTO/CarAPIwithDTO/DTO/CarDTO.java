@@ -1,13 +1,6 @@
 package com.carDTO.CarAPIwithDTO.DTO;
 
 import jakarta.validation.constraints.NotBlank;
-import lombok.*;
-import org.springframework.context.annotation.Bean;
-
-@ToString
-@AllArgsConstructor
-@NoArgsConstructor
-
 
 public class CarDTO {
 
